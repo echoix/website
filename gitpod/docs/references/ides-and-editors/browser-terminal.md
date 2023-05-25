@@ -10,7 +10,7 @@ title: Terminal (Browser)
 
 # Terminal (Browser)
 
-> The Browser Terminal is currently in [Beta](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/17724).
+> The Browser Terminal is currently in [Early Access](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/17724).
 
 The Browser Terminal is a standalone IDE option built with the same technologies powering VS Code's terminals.
 
