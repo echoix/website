@@ -9,15 +9,15 @@ title: AWS
 
 # Setting up OIDC Authentication with AWS
 
-> ℹ️ This document describes the setup for AWS with OIDC. [Learn more](/docs/configure/workspaces/oidc) about OpenID Connect in Gitpod.
+> ℹ️ This document is a guide for using AWS with Gitpod OIDC support. For more general information about the GItpod OIDC integration, see [OIDC](/docs/configure/workspaces/oidc).
 
-To use an <abbr title="Identity Provider">IdP</abbr>, you create an IAM identity provider entity to establish a trust relationship between your AWS account and the IdP. Using OIDC authentication with AWS gives you fine-grained control of which Gitpod workspaces can access what resources inside of your cloud account.
+To connect an <abbr title="Identity Provider">IdP</abbr> such as Gitpod to AWS you need to create an "IAM identity provider" to establish a trust relationship between your AWS account and Gitpod. Using OIDC authentication with AWS gives you fine-grained control of which Gitpod workspaces can access what resources inside of your cloud account.
 
 ## Step 1: Create an "AWS Identity Provider" resource
 
-AWS Identity Providers allow you to manage user identities outside of AWS, instead of creating IAM users in your AWS account and give these external identities (e.g. Gitpod workspaces) permissions to use AWS resources in your account.
+AWS Identity Providers allow you to manage user identities outside of AWS, instead of creating IAM users in your AWS account and giving these external identities (e.g. Gitpod workspaces) permissions to use AWS resources in your account.
 
-Configure the URL of the identity provider to: `https://api.<your-installation>/idp`
+Configure the URL of the identity provider to: `https://api.<gitpod-installation>/idp`
 
 For example: `https://api.gitpod.io/idp`.
 
@@ -86,6 +86,7 @@ To adjust the IAM role trust policy to restrict which workspaces can assume the 
 
 > 💡 **Important**: The following assumes that your workspace has the AWS CLI installed so that it can call `aws sts assume-role-with-web-identity`.
 
+You can either call the AWS CLI `assume-role` command manually, or use the helper command within the `gp` CLI, `gp idp aws login` which will automatically update your AWS CLI credentials file. 
 The following code will login to AWS using OIDC and then fetch a secret dynamically from AWS Secrets Manager for use in your application.
 
 <figure>
@@ -93,12 +94,11 @@ The following code will login to AWS using OIDC and then fetch a secret dynamica
 ```yaml
 tasks:
   - command: |
-    gp idp login aws --role-arn <your-iam-role-arn>
-    aws secretsmanager get-secret-value --secret-id database_connection_string --region us-east-1 | jq .SecretString
-```
+      gp idp login aws --role-arn <your-iam-role-arn>
+      aws secretsmanager get-secret-value --secret-id database_connection_string --region us-east-1 | jq .SecretString
 
   <figcaption>
-    Example <code>.gitpod.yml</code> that assumes a web identity role.
+    An example <code>.gitpod.yml</code> that assumes an AWS web identity role.
   </figcaption>
 </figure>
 
