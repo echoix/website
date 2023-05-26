@@ -49,7 +49,7 @@ Although this process is universal for all OIDC-compatible providers, we maintai
 
 ## Experimental Gitpod CLI integration
 
-You can interface with Gitpod's IdP using the `gp idp` subcommand. To retrieve the OIDC token for the current workspace simply run `gp idp token`, to return a JWT that can be exchanged with a third party service to grant access.
+You can retrieve a JWT token for OIDC using `gp idp` subcommand. To retrieve the OIDC token for the current workspace run `gp idp token`.
 
 For example, to request a new OIDC JWT for `example.org` you'll need to execute `gp idp token --audience example.org`, the output of which you can use to authenticate yourself.
 
