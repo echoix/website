@@ -15,7 +15,7 @@ You can use OIDC authentication to connect Gitpod workspaces to cloud providers 
 
 OpenID Connect (OIDC) is a simple identity layer on top of the [OAuth 2.0 protocol](https://oauth.net/2/), which allows clients to verify identity.
 
-OIDC introduces the concept of an Identity Token, a security token that allows the client to verify the identity of the user. The token is a <abbr title="JSON Web Token">JWT</abbr> that contains claims about the user. Claims are statements about a user, and can contain user information such as a name or email address.
+OIDC leverages use of a JWT, a security token that allows the client to verify the identity of the caller. The token is a <abbr title="JSON Web Token">JWT</abbr> that contains claims about the caller. Claims are statements about a caller and can contain information such as a name, email address or repository metadata.
 
 OIDC provides a reliable way to establish a user's identity, including the ability to authenticate them and get their basic profile information. It gives third-party applications a standardized, secure, and scalable method to authenticate and authorize users. When used in combination with Gitpod, it helps in automating the secure access to 3rd-party services that your workspaces might need to interact with.
 
