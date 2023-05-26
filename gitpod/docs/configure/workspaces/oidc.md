@@ -19,7 +19,7 @@ OIDC leverages use of a JWT, a security token that allows the client to verify t
 
 OIDC provides a reliable way to establish a user's identity, including the ability to authenticate them and get their basic profile information. It gives third-party applications a standardized, secure, and scalable method to authenticate and authorize users. When used in combination with Gitpod, it helps in automating the secure access to 3rd-party services that your workspaces might need to interact with.
 
-## Setting up OIDC Authentication with Any Provider
+## Setting up OIDC Authentication with a third party
 
 Setting up OIDC Authentication generally involves three main steps:
 
