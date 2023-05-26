@@ -37,7 +37,7 @@ Setting up OIDC Authentication generally involves three main steps:
     Sequence diagram of Authentication via OIDC using AWS with Gitpod
 </figcaption>
 
-Although this process is universal for all OIDC-compatible providers, we maintain the following docs that go in detail on setting them up:
+## Provider specific guides
 
 - [AWS](/docs/integrations/aws)
 
