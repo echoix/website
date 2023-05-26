@@ -60,7 +60,7 @@ $ gp idp token --audience example.org
 eyJhbGciOiJSUzI1NiIsImtpZCI6ImlkLTE2ODQ3NTc4MDY...
 ```
 
-The output of which, when decoded, translates to a JSON object similar to the one below.
+The output, when decoded, translates to a JSON object similar to the one below.
 
 ```json
 {
