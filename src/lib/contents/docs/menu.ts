@@ -44,6 +44,7 @@ export const MENU: MenuEntry[] = [
     M("Tasks", "configure/workspaces/tasks"),
     M("Ports", "configure/workspaces/ports"),
     M("Collaboration", "configure/workspaces/collaboration", false, []),
+    M("OpenID Connect (OIDC)", "configure/workspaces/oidc", false, []),
     M("Multi-repo", "configure/workspaces/multi-repo", false, [], "beta"),
     M("Workspace classes", "configure/workspaces/workspace-classes"),
   ]),
