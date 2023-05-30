@@ -12,26 +12,26 @@ title: Terminal (Browser)
 
 > The Browser Terminal is currently in [Early Access](/docs/help/public-roadmap/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/17724).
 
-The Browser Terminal is a standalone IDE option built with the same technologies powering VS Code's terminals.
+Use a terminal running in your browser as an IDE option to open your Gitpod projects. Use the terminal for simple and quick edits, or as your full time dedicated editing environment for all workspaces that you open. 
 
 ![Browser Terminal](../../../static/images/docs/browser-terminal.png)
 
-## Accessing tasks
+## Managing workspace tasks
 
-If you have pre-defined tasks in your `.gitpod.yml`, they will not appear right away as separate terminals like in JetBrains IDEs or VS Code. You can interface with tasks using [`gp tasks`](/docs/references/gitpod-cli#tasks).
+If you have defined tasks in your `.gitpod.yml` you can view and access those tasks using the command [`gp tasks`](/docs/references/gitpod-cli#tasks). 
 
-## Accessing ports
+> **Note:** Layout configuration such as `openMode` (e.g. `split-right`) are not supported. 
 
-Similar to tasks, you may want to open different ports' URLs. You can do that with [`gp preview`](/docs/references/gitpod-cli#preview).
+## Managing workspace ports
 
-> **Note**:💡 `gp preview` and `gp preview --external` have the same effect with the Browser Terminal, because split-view is not available there.
+To see open workspace ports, run [`gp ports list`](/docs/references/gitpod-cli#ports).
+
+> **Note**: `gp preview` and `gp preview --external` have the same effect with the Browser Terminal, because split-view is not supported in a browser terminal.
 
 ## FAQs
 
-### How can I create more terminals at once?
+### Can I view multiple terminals at the same time? e.g. split windows.
 
-For multitasking with multiple terminals at the same time, we recommend using `tmux`, which enables tiling your main terminal into multiple ones and much more.
+To open multiple terminals at the same time, we recommend `tmux`, which enables tiling your main terminal into multiple ones and much more. See [Dotfiles](/docs/configure/user-settings/dotfiles) for instructions on how to install tooling across all of your Gitpod workspaces. 
 
-**Read more**:
-
-[A beginner's guide to tmux | Red Hat](https://www.redhat.com/sysadmin/introduction-tmux-linux)
+See: [A beginner's guide to tmux | Red Hat](https://www.redhat.com/sysadmin/introduction-tmux-linux) for more.
