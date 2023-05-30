@@ -14,7 +14,7 @@ title: Browser Terminal
 
 Use a terminal running in your browser as an IDE option to open your Gitpod projects. Use the terminal for simple and quick edits, or as your full time dedicated editing environment for all workspaces that you open.
 
-![Browser Terminal](../../../static/images/docs/browser-terminal.png)
+![Browser Terminal](../../../static/images/docs/browser-terminal.webp)
 
 ## Managing workspace tasks
 
