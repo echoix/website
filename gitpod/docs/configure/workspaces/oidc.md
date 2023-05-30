@@ -1,5 +1,5 @@
 ---
-section: configure
+section: workspaces
 title: OpenID Connect
 ---
 
