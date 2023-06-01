@@ -3,7 +3,7 @@ import { writable } from "svelte/store";
 let storedTheme;
 
 if (typeof window !== "undefined" && typeof document !== "undefined") {
-  const theme = localStorage.getItem("theme") || "dark";
+  const theme = localStorage.getItem("theme");
   if (theme === "dark") {
     storedTheme = "dark";
   } else if (theme === "system") {

@@ -7,7 +7,7 @@
       doNotTrack: any;
       href?: string;
       prevPages?: string[];
-      localStorage?: any;
+      localStorage: any;
     }
   }
 
