@@ -126,7 +126,19 @@ export const post: RequestHandler = async ({ request }) => {
             body: { message: "Please include url and path in props" },
             status: 400,
           };
-        if (!body.props.url.startsWith("https://www.gitpod.io")) {
+
+        /*
+        * Checks if the URL provided in the request body is valid. 
+        * Returns a 400 status code and error message if the URL does not start 
+          with https://www.gitpod.io or contain gitpod-kumquat.netlify.app.
+
+        If the URL is invalid.
+        - Continues with the request if the URL is valid.
+        */
+        if (
+          !body.props.url.startsWith("https://www.gitpod.io") ||
+          !body.props.url.contains("gitpod-kumquat.netlify.app")
+        ) {
           return {
             body: { message: "Invalid URL provided" },
             status: 400,
