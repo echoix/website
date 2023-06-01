@@ -46,7 +46,7 @@
   </head>
   <body>
     <script>
-      const theme = localStorage.getItem("theme");
+      const theme = localStorage.getItem("theme") || "dark";
       const darkMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
       if (theme === null) {
@@ -67,7 +67,7 @@
       }
 
       darkMediaQuery.addEventListener("change", () => {
-        const storedTheme = localStorage.getItem("theme");
+        const storedTheme = localStorage.getItem("theme") || "dark";
         if (storedTheme === "system") {
           console.log("Called.");
           if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
