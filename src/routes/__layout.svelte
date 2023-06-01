@@ -48,20 +48,17 @@
   onMount(() => {
     Cookies.set(cookies.NECESSARY, "true", {
       expires: 365,
-      domain: ".gitpod.io" || ".netlify.app",
     });
 
     if (Cookies.get(cookies.ANALYTICAL) !== "false" && !isEurope()) {
       Cookies.set(cookies.ANALYTICAL, "true", {
         expires: 365,
-        domain: ".gitpod.io" || ".netlify.app",
       });
     }
 
     if (Cookies.get(cookies.ANALYTICAL) === "true") {
       Cookies.set(cookies.VISITED, "true", {
         expires: 365,
-        domain: ".gitpod.io" || ".netlify.app",
       });
     }
   });
