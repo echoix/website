@@ -14,23 +14,23 @@
     if (analyticalChecked) {
       Cookies.set(cookies.ANALYTICAL, "true", {
         expires: 365,
-        domain: ".gitpod.io",
+        domain: ".gitpod.io" || ".netlify.app",
       });
       Cookies.set(cookies.VISITED, "true", {
         expires: 365,
-        domain: ".gitpod.io",
+        domain: ".gitpod.io" || ".netlify.app",
       });
     } else {
       Cookies.set(cookies.ANALYTICAL, `${analyticalChecked}`, {
         expires: 365,
-        domain: ".gitpod.io",
+        domain: ".gitpod.io" || ".netlify.app",
       });
       Cookies.remove(cookies.VISITED);
     }
     if (targetingChecked) {
       Cookies.set(cookies.TARGETING, "true", {
         expires: 365,
-        domain: ".gitpod.io",
+        domain: ".gitpod.io" || ".netlify.app",
       });
     } else {
       Cookies.remove(cookies.TARGETING);

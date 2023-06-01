@@ -34,7 +34,7 @@
           on:click={() => {
             Cookies.set(cookies.ANALYTICAL, "false", {
               expires: 365,
-              domain: ".gitpod.io",
+              domain: ".gitpod.io" || ".netlify.app",
             });
             closeBanner();
           }}
@@ -54,11 +54,11 @@
         on:click={() => {
           Cookies.set(cookies.ANALYTICAL, "true", {
             expires: 365,
-            domain: ".gitpod.io",
+            domain: ".gitpod.io" || ".netlify.app",
           });
           Cookies.set(cookies.TARGETING, "true", {
             expires: 365,
-            domain: ".gitpod.io",
+            domain: ".gitpod.io" || ".netlify.app",
           });
           closeBanner();
         }}

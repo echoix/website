@@ -32,7 +32,7 @@
     if (!cookieId) {
       cookieId = v4();
       Cookies.set("ajs_anonymous_id", cookieId, {
-        domain: ".gitpod.io",
+        domain: ".gitpod.io" || ".netlify.app",
         expires: 365,
       });
     }
