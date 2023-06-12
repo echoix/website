@@ -113,7 +113,7 @@ To adjust the IAM role trust policy to restrict which workspaces can assume the 
 
 <figure>
 <figcaption>
-    Example IAM assume role trust policy to grant access to any repo in the "gitpod-io" organisation.
+    Example IAM assume role trust policy to grant access to any repo in the "gitpod-io" organization.
   </figcaption>
 </figure>
 
