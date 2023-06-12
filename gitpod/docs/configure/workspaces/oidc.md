@@ -77,3 +77,5 @@ The output, when decoded, translates to a JSON object similar to the one below.
   "sub": "https://github.com/gitpod-io/website/pull/1"
 }
 ```
+
+> 💡 **Important**: `email_verified` is only true if you are signed in to Gitpod via an SSO provider. If you're only signed in with an <abbr title="Source Code Management">SCM</abbr> authentication provider, this field will be `false`.
