@@ -3,8 +3,8 @@ title: Workspaces forward ports using the HTTPS protocol
 alt: An example gitpod.yml configuration showing the protocol property set to https
 date: 2023-06-16
 excerpt: You can now expose ports from your workspace running with HTTPS configured either in the gitpod.yml or using the Gitpod CLI.
-image: https-port-configuration.png
-ogImage: https-port-configuration.png
+image: https-port-configuration.webp
+ogImage: https-port-configuration.webp
 customSlug: https-workspace-ports
 ---
 
