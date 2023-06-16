@@ -320,7 +320,7 @@ gp ports visibility 3000:private
 
 ### protocol
 
-Be default ports running in the workspace are assumed to be HTTP. You can dynamically configure (without a workspace restart) a port to use HTTPS with the `gp ports protocol` command.
+By default ports running in the workspace are assumed to be HTTP. You can dynamically configure (without a workspace restart) a port to use HTTPS with the `gp ports protocol` command.
 
 For example, to convert port `3000` to `https`:
 
