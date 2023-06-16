@@ -245,7 +245,7 @@ In your server (the one on port 5001 in the above example), you have to configur
 
 ## Port protocols
 
-Be default ports running in the workspace are assumed to be HTTP. You can configure your port to use HTTPS by updating the `.gitpod.yml` or using the `gp ports protocol` command.
+By default ports running in the workspace are assumed to be HTTP. You can configure your port to use HTTPS by updating the `.gitpod.yml` or using the `gp ports protocol` command.
 
 > **Note:** Updating your `.gitpod.yml` is the preferred approach to using the `gp` CLI, as the `.gitpod.yml` is declarative and ensures workspaces are created repeatably.
 
