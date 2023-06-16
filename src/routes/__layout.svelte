@@ -89,12 +89,16 @@
   }
 </style>
 
-<svelte:head
-  ><link
+<svelte:head>
+  <link
     rel="canonical"
     href={removeTrailingSlash(`https://www.gitpod.io${$page.url.pathname}`)}
-  /></svelte:head
->
+  />
+
+  {#if ["changelog", "docs", "guides", "blog"].includes($page.url.pathname.split("/")[1])}
+    <link rel="stylesheet" href="/prism-solarized-light.min.css" />
+  {/if}
+</svelte:head>
 
 <LayoutRoot>
   <Nav />

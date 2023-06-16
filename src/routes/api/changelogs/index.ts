@@ -9,6 +9,7 @@ export const get: RequestHandler = async () => {
       .map(async ([path, mod]) => {
         const { default: content, metadata } = await mod();
         const fileName = basename(path);
+
         return {
           ...metadata,
           excerpt: (await compile(metadata.excerpt)).code.trim(),
