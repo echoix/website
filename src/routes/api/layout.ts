@@ -1,4 +1,5 @@
 import type { RequestHandler } from "@sveltejs/kit";
+import { USE_CACHE } from "$env/static/private";
 import path from "path";
 import fs from "fs";
 
@@ -7,7 +8,6 @@ const fallbackStars = 11035;
 const startDate = new Date("June 14 2023 00:00:00 EST");
 const endDate = new Date("July 14 2023 06:00:00 EST");
 
-const USE_CACHE = process.env.USE_CACHE;
 const CACHE_PATH = path.resolve("stars-cache.json");
 
 let stars: number;
