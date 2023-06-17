@@ -8,12 +8,9 @@
     "svelte"
   ],
   "scripts": {
-    "watch:dev": "vite dev",
-    "clean": "run-p clean:*",
-    "clean:build": "rm -fr ./build",
-    "dev": "npm run clean && run-p watch:*",
+    "dev": "vite dev --host 0.0.0.0",
     "build": "USE_CACHE=true vite build",
-    "deploy": "run-s clean build:css build:svelte",
+    "deploy": "npm run build",
     "start": "vite preview",
     "validate": "svelte-check",
     "prepare": "svelte-kit sync && husky install",
