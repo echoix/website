@@ -63,7 +63,7 @@ async function sendEmail(
   }
 }
 
-export const post: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request }) => {
   const body = await request.json();
   const email: Email = body! as Email;
   const SENDGRID_TO_EMAIL = determineToEmail(email.toType);
