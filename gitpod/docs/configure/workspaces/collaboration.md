@@ -33,7 +33,7 @@ There are a few important things to note about workspace snapshots:
 
 > **Note:** Caution should always be taken when sharing potentially sensitive information, including Gitpod workspace snapshots. If you are concerned you have accidentally shared sensitive information, we suggest you follow best practices such as immediately rotating credentials and adhere to your typical security response process.
 
-### How To Take a Snapshot URL
+### How to Take a Snapshot URL
 
 <IdeToggle id="ide-toggle-ports">
 
